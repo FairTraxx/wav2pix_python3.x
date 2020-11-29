@@ -1,0 +1,7 @@
+# training pickle files path:
+train_faces_path: 
+train_audios_path: 
+
+# inference pickle files path:
+inference_faces_path: 
+inference_audios_path: 
