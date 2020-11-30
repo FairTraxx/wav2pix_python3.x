@@ -7,7 +7,6 @@ cycler
 decorator==4.2.1
 enum34==1.1.6
 funcsigs==1.0.2
-##futures==3.3.0 no longer needed 
 h5py==3.1.0
 idna==2.6
 joblib
@@ -17,9 +16,7 @@ llvmlite
 matplotlib==2.2.0
 networkx==2.1
 numba
-##numpy==1.14.3
 olefile==0.44
-#pandas==0.23.4
 Pillow
 pyparsing==2.2.0
 python-dateutil==2.8.1
@@ -35,11 +32,16 @@ scikit-video
 scipy
 singledispatch==3.4.0.3
 six==1.15.0
-#subprocess32==3.2.7
-##torch
 torchfile
 torchvision
-##tornado==5.0.1
 tqdm
 urllib3==1.22
 visdom
+
+##The below packages are either depricated or not suppourted by colab's runtime or suppourted by colab and changing their versions would crash the runtime
+##futures==3.3.0 no longer needed 
+##tornado==5.0.1
+##torch
+#subprocess32==3.2.7
+#pandas==0.23.4
+##numpy==1.14.3
