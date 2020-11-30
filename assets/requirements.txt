@@ -27,7 +27,7 @@ pytz==2020.4
 PyWavelets==1.1.1
 PyYAML
 pyzmq==20.0.0
-requests==2.25.0
+requests==2.18.4
 resampy==0.2.1
 scikit-image
 scikit-learn

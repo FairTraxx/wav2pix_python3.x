@@ -1,7 +1,7 @@
 # training pickle files path:
-train_faces_path: 
-train_audios_path: 
+train_faces_path: /content/wav2pix_python3.x/assets/faces/picklerick.pkl
+train_audios_path: /content/wav2pix_python3.x/assets/audios/picklerick.pkl
 
 # inference pickle files path:
-inference_faces_path: 
-inference_audios_path: 
+inference_faces_path: /content/wav2pix_python3.x/assets/faces/picklerick.pkl
+inference_audios_path: /content/wav2pix_python3.x/assets/audios/picklerick.pkl

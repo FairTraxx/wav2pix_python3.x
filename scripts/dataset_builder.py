@@ -56,7 +56,13 @@ class dataset_builder(Dataset):
 
         # getting audio paths.
         audio_path = self.audios[idx]
-        fm, wav_data = wavfile.read([x for x in audio_path if x in printable])
+        #print(audio_path)
+        #print(idx)
+        passing_data = [x for x in audio_path if x in printable]
+        finaldirectory = ''.join(passing_data)
+        print(finaldirectory)
+        fm, wav_data = wavfile.read(finaldirectory)
+        print(wav_data)
         if fm != 16000:
             raise ValueError('Sampling rate is expected to be 16kHz!')
 
@@ -107,11 +113,13 @@ class dataset_builder(Dataset):
 
     def format_filename(self, filename):
         try:
-            filename = filename.decode('utf-8')
+            #filename = filename
             s = ''.join((c for c in unicodedata.normalize('NFD', str(filename)) if unicodedata.category(c) != 'Mn'))
-            return s.decode()
+            return s
+            print(s)
         except (UnicodeEncodeError, UnicodeDecodeError):
             return filename
+            print(filename,"datasetbuilder")
 
     def abs_normalize_wave_minmax(self, wavdata):
         x = wavdata.astype(np.int32)
