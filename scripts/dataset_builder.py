@@ -60,7 +60,7 @@ class dataset_builder(Dataset):
         #print(idx)
         passing_data = [x for x in audio_path if x in printable]
         finaldirectory = ''.join(passing_data)
-        print(finaldirectory)
+        #print(finaldirectory)
         fm, wav_data = wavfile.read(finaldirectory)
         print(wav_data)
         if fm != 16000:
@@ -77,7 +77,9 @@ class dataset_builder(Dataset):
         wav_data = self.pre_emphasize(wav_data)
 
         # opening the corresponding image and a wrong_face
-        cropped_face = Image.open([x for x in format_path if x in printable].replace('.jpg', '.png'))
+        cropped_face_iteration = [x for x in format_path if x in printable]
+        cropped_face_final = ''.join(cropped_face_iteration)
+        cropped_face = Image.open(cropped_face_final)
         wrong_face_path = self.get_dismatched_face(audio_path)
         wrong_face = Image.open(wrong_face_path)
 
@@ -116,10 +118,10 @@ class dataset_builder(Dataset):
             #filename = filename
             s = ''.join((c for c in unicodedata.normalize('NFD', str(filename)) if unicodedata.category(c) != 'Mn'))
             return s
-            print(s)
+            #print(s)
         except (UnicodeEncodeError, UnicodeDecodeError):
             return filename
-            print(filename,"datasetbuilder")
+            #print(filename,"datasetbuilder")
 
     def abs_normalize_wave_minmax(self, wavdata):
         x = wavdata.astype(np.int32)

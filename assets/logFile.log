@@ -1,0 +1,5 @@
+Epoch: 0, d_loss= 0.462672, g_loss= 53.476517, D(X)= 0.346403, D(G(X))= 0.018451, wrong score: 0.382240
+Epoch: 1, d_loss= 0.428136, g_loss= 48.590019, D(X)= 0.389515, D(G(X))= 0.000402, wrong score: 0.405467
+Epoch: 2, d_loss= 0.400938, g_loss= 52.340317, D(X)= 0.466659, D(G(X))= 0.064089, wrong score: 0.453555
+Epoch: 3, d_loss= 0.452985, g_loss= 65.357559, D(X)= 0.433982, D(G(X))= 0.033130, wrong score: 0.470455
+Epoch: 4, d_loss= 0.418465, g_loss= 45.490658, D(X)= 0.460912, D(G(X))= 0.044762, wrong score: 0.460591
